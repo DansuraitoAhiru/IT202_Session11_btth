@@ -40,8 +40,6 @@ VALUES
 
 -- Các biến cục bộ sẽ dùng:
 -- v_stock → số lượng tồn kho vì cần phải so sánh trước khi trừ kho
--- Không nên viết kiểu: IF p_quantity > (SELECT stock FROM Medicines ...) THEN
--- dĩ nhiên vẫn chạy được nhưng bị lặp query nhiều lần làm tốn tài nguyên
 -- v_price → đơn giá vì cần dùng để tính tiền và để ko bị lặp query
 -- v_total → tiền gốc vì còn phần giá sau khi áp mã giảm giá nữa nên để rõ ràng, tạo 1 biên lưu trữ giá trước giảm
 -- v_discount_price → tiền sau giảm giá vì như đã nói trên cần giá tiền sẽ có 2 trạng thái: trước & sau giảm và không nên ghi đè luôn v_total (dễ rối logic, nhỡ đâu còn phải dùng giá gốc cho việc khác)
