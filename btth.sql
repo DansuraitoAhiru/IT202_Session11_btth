@@ -30,12 +30,12 @@ VALUES
 
 -- Luồng:
 -- Lấy: stock (tồn kho) và price (đơn giá)
--- So sánh: Nếu p_quantity > stock → Lỗi, trả về thông báo thất bại
--- Nếu đủ hàng: Trừ kho → Tính tiền: total = quantity * price
--- Áp dụng giảm giá: Nếu mã là NV-RIKKEI → giảm 50%
--- Ngược lại → giữ nguyên
+-- So sánh: Nếu p_quantity > stock thì Lỗi, trả về thông báo thất bại
+-- Nếu đủ hàng: Trừ kho và Tính tiền: total = quantity * price
+-- Áp dụng giảm giá: Nếu mã là NV-RIKKEI thì giảm 50%
+-- Ngược lại thì giữ nguyên
 -- Cập nhật:
--- cộng vào Patient_Invoices.total_due
+-- cộng lại vào Patient_Invoices.total_due
 -- nếu đã thực hiện xong tất cả, trả về tb: "Thành công: Đã xử lý đơn thuốc"
 
 -- Các biến cục bộ sẽ dùng:
